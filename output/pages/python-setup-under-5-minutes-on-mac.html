@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Vividh Viswanatha">
+  <meta name="description" content="Posts and writings by Vividh Viswanatha">
+
+
+
+  <title>
+    Vividh S V
+&ndash; Python Environment setup under 10 minutes on Mac  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="">
+        <img src="/theme/images/logo.png" alt="logo">
+      </a>
+      <h2><a href="">Vividh Viswanatha</a></h2>
+      <p></p>
+      <ul>
+        <li><a href="/pages/python-setup-under-5-minutes-on-mac.html">Python Environment setup under 10 minutes on Mac</a></li>
+        <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+        <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+        <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+        <li><a href="#" target="_blank">You can modify those links in your config file</a></li>
+        <li><a href="#" target="_blank">You can add links in your config file</a></li>
+        <li><a href="#" target="_blank">Another social link</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="">Index</a> &brvbar; <a href="/archives.html">Archives</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="/pages/python-setup-under-5-minutes-on-mac.html">Python Environment setup under 10 minutes on Mac</a></h3>
+  </div>
+  <div class="article_text">
+    <p>If you are new to Python development or if you got a shiny new Macbook like me, you might be wanting to setup Python. We all know it is not a good idea to use default Python packaged with your Mac. If you were not aware, it is a bad practice due to the following reasons.</p>
+<p>Default system python might be used by other OS packages or applications, which might have hard dependence on the python version. Hence you will not be able to easily upgrade or downgrade python depending on your project needs. You will also have to compile and install python and if things go wrong you might end up with a corrupt Python.
+Handling different versions of Python or Python packages will not be possible.</p>
+<p>When you have to deal with such problems
+http://33.media.tumblr.com/ec225e66f479de8146c28993f12f20a6/tumblr_inline_o1hodwTFOf1raprkq_500.gif</p>
+<p>Ok now that we have the reason why not to use the default Python package explained let move on to setting up new Python. There are two ways you could do this one the hard way and the other easy way. Hard way is where you will compile source and create new Python binary location. I will not be going through this method in this post. Easy way, as it implies is not more then three easy steps to have everything setup and ready.</p>
+<p>Check where is the default Python binary at
+    which python
+This should return /usr/bin/python</p>
+<p>Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</p>
+<p>Update Homebrew
+    brew update</p>
+<p>Install Python 2.x
+    brew install python
+This will install latest Python under Python 2.x version.</p>
+<p>Install Python 3.x
+    brew install python3
+This will install latest Python under Python 3.x version.</p>
+<p>Check where is the new Python binary now for both Python2.x and Python3.x
+    which python
+This should return /usr/local/bin/python
+    which python3
+This should return /usr/local/bin/python3</p>
+<p>Now you have both new Python2 and Python3 installed. However, we still have one issue.We cannot switch between different Python versions when ever required depending on the project and will not be able to install and maintain different versions of python packages. Imagine you have an application that needs version 1 of LibFoo, but another application requires version 2. How can you use both these applications? (Taken from https://virtualenv.readthedocs.org/en/latest/, no better way to explain this)</p>
+<p>Virtualenv to the rescue. Virtualenv is a tool to create isolated Python environments.</p>
+<p>Install Virtualenv
+    pip install virtualenv
+This should install virtualenv package to help install new virtual Python binary environments.</p>
+<p>Now to create new virtual Python environment, Lets run the following commands</p>
+<p>Create an directory to install virtual Python Binaries
+mkdir -p ~/.virtualenv
+cd .virtualenv</p>
+<p>Create virtualenv
+    virtualenv my_python</p>
+<p>Switch to my_python
+    source ~/.virtualenv/bin/activate</p>
+<p>Check where is the new Python binary now for both Python2.x and Python3.x
+    which python
+This is should show ~/.virtualenvs/my_python/bin/python</p>
+<p>This should suffice most of our needs, however we could further ease our efforts to create Python virtualenvs and switching back and forth between different virtualenvs.</p>
+<p>Virtualenvwrapper to the rescue. virtualenvwrapper is a set of extensions to virtualenv. This extension help creating, deleting and managing your virtualenvs.</p>
+<p>Install virtualenvwrapper
+    pip install virtualenvwrapper</p>
+  </div>
+  <div class="article_meta">
+    <p>Updated on: Tue 01 March 2016</p>
+  </div>
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; Vividh Viswanatha. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>
