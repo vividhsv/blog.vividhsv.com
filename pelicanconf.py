@@ -9,6 +9,7 @@ SITETITLE = AUTHOR
 SITEDESCRIPTION = 'Notes for self and others'
 SITELOGO = SITEURL + '/images/vividhsv.png'
 PATH = 'content'
+FAVICON = SITEURL + '/images/favicon.ico'
 
 TIMEZONE = 'America/New_York'
 
@@ -26,9 +27,10 @@ LINKS = ()
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/vividhsv'),
-('facebook', 'https://facebook.com/vividhsv'),
-('linkedin', 'https://www.linkedin.com/in/vividhsv'),)
+          ('facebook', 'https://facebook.com/vividhsv'),
+          ('linkedin', 'https://www.linkedin.com/in/vividhsv'),)
 
+MAIN_MENU = True
 MENUITEMS = (('Archives', '/archives.html'),
              ('Categories', '/categories.html'),
              ('Tags', '/tags.html'),)
