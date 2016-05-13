@@ -4,8 +4,10 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Vividh Viswanatha'
 SITENAME = 'Vividh S V'
-SITEURL = ''
-
+SITEURL = 'http://localhost:8000'
+SITETITLE = AUTHOR
+SITEDESCRIPTION = 'Notes for self and others'
+SITELOGO = SITEURL + '/images/vividhsv.png'
 PATH = 'content'
 
 TIMEZONE = 'America/New_York'
@@ -23,7 +25,21 @@ AUTHOR_FEED_RSS = None
 LINKS = ()
 
 # Social widget
-SOCIAL = ()
+SOCIAL = (('github', 'https://github.com/vividhsv'),
+('facebook', 'https://facebook.com/vividhsv'),
+('linkedin', 'https://www.linkedin.com/in/vividhsv'),)
+
+MENUITEMS = (('Archives', '/archives.html'),
+             ('Categories', '/categories.html'),
+             ('Tags', '/tags.html'),)
+
+CC_LICENSE = {
+    'name': 'Creative Commons Attribution-ShareAlike',
+    'version': '4.0',
+    'slug': 'by-sa'
+}
+
+COPYRIGHT_YEAR = 2016
 
 DEFAULT_PAGINATION = 5
 

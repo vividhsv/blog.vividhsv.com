@@ -6,16 +6,16 @@ Tags: Python, Virtualenv, Virtualenvwrapper, Homebrew
 Slug: python-setup-under-5-minutes-on-mac
 Authors: Vividh Viswanatha
 Summary: Short version for index and feeds
+Status: draft
 
 If you are new to Python development or if you got a shiny new Macbook like me, you might be wanting to setup Python. We all know it is not a good idea to use default Python packaged with your Mac. If you were not aware, it is a bad practice due to the following reasons.
 
-Default system python might be used by other OS packages or applications, which might have hard dependence on the python version. Hence you will not be able to easily upgrade or downgrade python depending on your project needs. You will also have to compile and install python and if things go wrong you might end up with a corrupt Python.
-Handling different versions of Python or Python packages will not be possible.
+Default system python might be used by other OS packages or applications, which might have hard dependence on the python version. Hence you will not be able to easily upgrade or downgrade python depending on your project needs. You will also have to compile and install python and if things go wrong you might end up with a corrupt Python. Alternatively, you could also download Python installer from python.org site.However handling different versions of Python or Python packages will not be possible.
 
 When you have to deal with such problems
 http://33.media.tumblr.com/ec225e66f479de8146c28993f12f20a6/tumblr_inline_o1hodwTFOf1raprkq_500.gif
 
-Ok now that we have the reason why not to use the default Python package explained let move on to setting up new Python. There are two ways you could do this one the hard way and the other easy way. Hard way is where you will compile source and create new Python binary location. I will not be going through this method in this post. Easy way, as it implies is not more then three easy steps to have everything setup and ready.
+Ok now that you have been informed better lets move on to setting up new Python. There are two ways you could do this one the hard way and the other easy way. Hard way is where you will compile source and create new Python binary location. I will not be going through this method in this post. Easy way, as it implies is not more then three easy steps to have everything setup and ready.
 
 Check where is the default Python binary at
 ```shell
