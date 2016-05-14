@@ -5,7 +5,6 @@ Category: Development
 Tags: Homebrew
 Slug: installing-homebrew-on-mac
 Authors: Vividh Viswanatha
-Summary: The missing package manager for OS X, Installing Homebrew on Mac OS
 
 We all love the ease package managers like 'apt-get' in Ubuntu and 'yum' in centOS provide. Wouldn't it be great to have a similar package manager for MacOS too? Homebrew solves that problem for us. Homebrew, "The missing package manager for OS X" as they rightly advertise on their website.
 
